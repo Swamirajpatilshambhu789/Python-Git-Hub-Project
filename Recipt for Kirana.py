@@ -1,4 +1,7 @@
+# Intro
 print("Welcome to Recipt Maker")
+
+# Making Receipt and converting it into txt file
 def writer(items, tax_rate=0.07):
     total = 0
     receipt = "\n===== Receipt =====\n"
@@ -16,13 +19,29 @@ def writer(items, tax_rate=0.07):
     file = open('recipt.txt', 'w')
     file.write(receipt)
 
+# Making a dict to store the item name and its price
 items = {}
+
+# Continueing till all items are entered
 while True:
-    item = input("Enter the name of the item(enter done to finish): ")
-    if item=='done':
-        break
+    try:
+        # Asking for name of item
+        item = input("Enter the name of the item(enter done to finish): ")
 
-    price = input("Enter the price of the item: ")
-    items[item] = float(price)
+        # If all items are entered
+        if item=='done':
+            break
+        
+        # Asking for Price of item
+        price = input("Enter the price of the item: ")
 
-receipt = writer(items)
+        # Storing name and price into dict
+        items[item] = float(price)
+
+        # Calling Function
+        receipt = writer(items)
+
+    # Handling Error
+    except:
+        print("Enter valid input")
+        continue

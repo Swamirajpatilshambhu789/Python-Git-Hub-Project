@@ -1,9 +1,11 @@
 class ibp:
     def __init__(self, name, sallery, perfomncerate):
+        # self means the variable name who has called it
         self.name = name
         self.sallery = sallery
         self.performancerate = perfomncerate
 
+        # Conditioning
         if perfomncerate<100:
             if perfomncerate<5:
                 print("No incriminating")
@@ -53,17 +55,29 @@ class ibp:
         else:
             print("Enter performancerate in between 1 to 100")
 
+# Intro
 print("Welcome to incriminatingbyperformance converter")
 try:
+    # Can make Take out the incriminating how many times i want
     while True:
+        # Asking for name
         name = input("Enter your name(enter q to quit): ")
+
+        # To quit 
         if name=='q':
             print("Thanks for using this app.Have a nice day")
             break
             quit()
 
+        # Asking for sallery
         sallery = int(input("Enter your sallery: "))
+
+        # Asking for performancerate
         performancerate = int(input("Enter your performancerate: "))
+
+        # Calling function
         sibp = ibp(name, sallery,performancerate)
+
+# Handling Error
 except:
     print("Enter valid input")

@@ -8,10 +8,15 @@ engine.setProperty('voice', voices[0].id)
 
 # Intro
 print("Welcome to RoboSpeaker")
+while True:
+    # Asking input
+    useri = input("Enter what you want me to say(Enter q to quit): ")
 
-# Asking input
-useri = input("Enter what you want me to say: ")
+    if useri=='q':
+        print("Thanks for using this app. Have a nice day")
+        break
+        quit()
 
-# Saying
-engine.say(useri)
-engine.runAndWait()
+    # Saying
+    engine.say(useri)
+    engine.runAndWait()

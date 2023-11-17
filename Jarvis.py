@@ -34,8 +34,8 @@ def intro():
         print("Good afternoon")
         speak("Good afternoon")
 
-    print("i am jarvis please tell me how may i help you")
     speak("i am jarvis please tell me how may i help you")
+    print("i am jarvis please tell me how may i help you")
 
 # This will take our command by voice
 def commandtaker():

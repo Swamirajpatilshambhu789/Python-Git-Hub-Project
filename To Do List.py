@@ -23,11 +23,11 @@ tasksdone = []
 while True:
     # asking for todays task which are done
     taskdone = input("Enter tasks done: ")
-    tasksdone.append(taskddone)
+    tasksdone.append(tasksdone)
 
     # Counting list items for condition
-    countsd = Counter(tasksdone)
-    countss = Counter(tasks)
+    countsd = len(tasksdone)
+    countss = len(tasks)
 
     # If all tasks are finshed
     if countsd==countss:

@@ -1,4 +1,3 @@
-# Importing Module
 import datetime
 import os
 import webbrowser
@@ -7,19 +6,16 @@ import wikipedia
 import pyttsx3
 import speech_recognition
 import datetime
-# Setting up. to speak
 recognizer = speech_recognition.Recognizer()
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
+# print(voices[1].id)
 engine.setProperty('voice', voices[0].id)
 
-
-# Speaking Function
 def speak(text):
     engine.say(text)
     engine.runAndWait()
 
-# Intro
 def intro():
     hour = int(datetime.datetime.now().hour)
     if hour>=0 and hour<12:
@@ -37,7 +33,6 @@ def intro():
     speak("i am jarvis please tell me how may i help you")
     print("i am jarvis please tell me how may i help you")
 
-# This will take our command by voice
 def commandtaker():
         try:
             with speech_recognition.Microphone() as mic:
@@ -54,16 +49,14 @@ def commandtaker():
         except:
             return print("Please Say it again")
 
-# proccesing the function
 if __name__=="__main__":
     intro()
     while True:
-        # Handles error if the retrun value is none form the commandtaker function
         try:
             query = commandtaker().lower()
         except:
             continue
-        # Following our instruction by cheaking input 
+        print(query)
         if "wikipedia"==query:
             print("say to search in wikipedia")
             tosearch = commandtaker()
@@ -102,7 +95,6 @@ if __name__=="__main__":
             speak(f"The date is {datesg}") 
         elif "shutdown"==query:
             os.startfile(os.path.join("Desktop\\shutdown"))
-        # if somebody inputs command which is not in our program
         else:
             speak(f"jarvis don't know about it")
             continue

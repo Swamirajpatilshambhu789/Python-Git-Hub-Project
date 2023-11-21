@@ -93,8 +93,7 @@ if __name__=="__main__":
             now = datetime.datetime.now()
             datesg = now.strftime("%Y-%m-%d")
             speak(f"The date is {datesg}") 
-        elif "shutdown"==query:
-            os.startfile(os.path.join("Desktop\\shutdown"))
+
         else:
             speak(f"jarvis don't know about it")
             continue

@@ -1,19 +1,26 @@
 class liblaryman:
     def __init__(self, bookbor):
         self.bookbor = bookbor
-        bookspresent = ["python", "sudha murti", "the toyota way", "java", "fullstack web devlopment"]
+        bookspresent = {
+            "python": 50,
+            "sudha murti": 70,
+            "the toyota way": 80,
+            "java": 45,
+            "fullstack web devlopment":50
+            }
         if bookbor=='b':
             bookname = input("Enter book name to Borrow: ")
             if bookname in bookspresent:
                 print(f"here is {bookname}")
-                bookspresent.remove(bookname)
+                bookspresent.pop(bookname)
 
             else:
                 print("Sorry we don't have that book")
         if bookbor=='r':
-            bookname = input("Enter book name to Retrun: ")
+            bookname = input("Enter book name to Retrun or to doante: ")
+            bookprice = input("Enter book price to Retrun or to doante: ")
             if bookname not in bookspresent:
-                bookspresent.append(bookname)
+                bookspresent.update({bookname:bookprice})
 
             else:
                 print("We already have that book")
@@ -27,10 +34,10 @@ class liblaryman:
 
 while True:
     thingtodo = input('''Welcome to wonders liblary
-                  ShowBook(Enter s)
-                  BorrowBook(Enter b)
-                  RetrunBook(Enter r)
-                  Quit(Enter q)''')
+        ShowBook(Enter s)
+        BorrowBook(Enter b)
+        RetrunBookOrToDonate(Enter r)
+        Quit(Enter q)''')
 
 
 

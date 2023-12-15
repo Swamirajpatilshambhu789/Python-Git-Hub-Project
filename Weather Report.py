@@ -11,7 +11,7 @@ while True:
     nameoc = input(f"Enter the name of the city(in {nameos}): ")
 
     # storing api url
-    url = f"http://api.weatherapi.com/v1/current.json?key=c0005a6eb1a449f3be4102524230911&q={nameoc}/{nameos}"
+    url = f"http://api.weatherapi.com/v1/current.json?key=c0005a6eb1a449f3be4102524230911&q={nameoc}/{nameos}/{nameoco}"
 
     # Importing data from url
     r = requests.get(url)

@@ -7,12 +7,12 @@ randnum = random.randint(1, 100)
 # Counts Highscore
 Highscore = 0
 
+print("Welcome to the guessing game!")
 while True:
   # adds Highscore
   Highscore = Highscore + 1
 
   # Intro
-  print("Welcome to the guessing game!")
 
   # Asking for input
   guesse = input("Enter the number between 1 and 100(Enter q to quit): ")

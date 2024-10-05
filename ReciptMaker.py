@@ -6,7 +6,7 @@ def writer(items, tax_rate=0.07):
     total = 0
     receipt = "\n===== Receipt =====\n"
     for item, price in items.items():
-        receipt += f"{item}: ${price:.2f}\n"
+        receipt += f"{item}: ₹{price:.2f}\n"
         total += float(price)
 
     tax = total * tax_rate
@@ -36,7 +36,7 @@ while True:
         price = input("Enter the price of the item: ")
 
         # Storing name and price into dict
-        items[item] = float(price)
+        items[item] = str(price)
 
         # Calling Function
         receipt = writer(items)

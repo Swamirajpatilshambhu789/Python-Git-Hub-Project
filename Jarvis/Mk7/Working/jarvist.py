@@ -168,7 +168,7 @@ for i in range(3):
 
                 elif "what's the time" in query:
                     now = datetime.datetime.now()
-                    timesg = now.strftime("%H:%M:%S")
+                    timesg = now.strftime("%H:%M")
                     speak(f"The time is {timesg}")
 
                 elif "what's the date" in query:
@@ -177,8 +177,9 @@ for i in range(3):
                     speak(f"The date is {datesg}") 
 
                 elif "google" in query:
-                    query = query.replace("search on", " ")
-                    query = query.replace("google"," ")
+                    query = query.replace("jarvis", "")
+                    query = query.replace("search on", "")
+                    query = query.replace("google","")
                     pywhatkit.search(query)
 
                 elif "youtube" in query:

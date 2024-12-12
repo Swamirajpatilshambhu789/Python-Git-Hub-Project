@@ -1,0 +1,8 @@
+7 45Am to 2 o Pm   School
+2 o Pm to 4 o Pm   Rest
+4 o Pm to  6 o Pm   Study
+6 o Pm to  8 o Pm   Coding
+8 o Pm to  8 45Pm   Workout
+8 45Pm to  9 45Pm   Dinner
+9 45Pm to  11 o Pm  Rest
+11 o Pm to  7 0Am  Sleep

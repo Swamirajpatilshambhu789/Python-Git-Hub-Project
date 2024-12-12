@@ -130,8 +130,8 @@ for i in range(3):
     passwordebu = input("Enter the password: ")
     if passwordebu==password:
         # play_gif()
-        speak("Welcome to Jarvis(an super ai)")
-        print("Welcome to Jarvis(an super ai)")
+        speak("Welcome I am Jarvis(an ai)")
+        print("Welcome I am  Jarvis(an ai)")
         if __name__ in "__main__":
             intro()  
             while True:
@@ -397,7 +397,8 @@ for i in range(3):
                         api_url = 'https://api.api-ninjas.com/v1/recipe?query={}'.format(queryr)
                         response = requests.get(api_url, headers={'X-Api-Key': 'rcQCPRDdYMUZM88WTYUMVg==iJACOh0etertCVPl'})
                         if response.status_code == requests.codes.ok:
-                            speak(response.text)
+                            speak(f"You can Read this make the {queryr}")
+                            print(response.text)
                         else:
                             print("Error:", response.status_code, response.text) 
 
@@ -409,7 +410,13 @@ for i in range(3):
                         api_url = 'https://api.api-ninjas.com/v1/dictionary?word={}'.format(word)
                         response = requests.get(api_url, headers={'X-Api-Key': 'rcQCPRDdYMUZM88WTYUMVg==iJACOh0etertCVPl'})
                         if response.status_code == requests.codes.ok:
-                            speak(response.text)
+                            speak("Enter (r) for me to read it ")
+                            sonom = input("Enter (r) for me to read it")
+                            print(response.text)
+                            if sonom=="r":
+                                speak(response.text)
+                            else:
+                                break
                         else:
                             print("Error:", response.status_code, response.text)
 

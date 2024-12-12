@@ -14,7 +14,7 @@ def generate_qr_code(data, filename):
     img.save(filename)
 
 if __name__ == "__main__":
-    data_to_encode = "https://www.youtube.com/watch?v=onHPipeASdk&list=PLpp8-k7G_6Y3Wj1suZQ-9lATFzFuGw93x&index=1"  # Replace this with your data
+    data_to_encode = "https://www.youtube.com/"  # Replace this with your data
 
     output_filename = "generated_qr_code.png"  # Replace this with your desired filename
 

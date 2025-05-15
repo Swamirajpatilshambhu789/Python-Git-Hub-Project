@@ -1,0 +1,154 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+body{
+    background-color: black;
+}
+
+.navbar{
+    width: 100%;
+}
+
+.imgnav{
+    /* height: 2; */
+    width: 100%;
+}
+
+.password{
+    background-color: #202020;
+    height: 100px;
+    display: grid;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    /* justify-content: center ; */
+    grid-column: 2;
+    grid-template-columns: 10% 80% 10%;
+    height: 100%;
+    margin-top: 10vh;
+    border-radius: 20px;
+    /* padding-top: 5vh; */
+    grid-template-rows: 30% 40% 20%;
+}
+
+.headingpassword{
+    background-color: #151515;
+    grid-column: 2;
+    width: 45%;
+    height: 40px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 41px;
+    padding:5px;
+    /* width: 45%; */
+    grid-row: 1;
+    width: 100%;
+    /* margin-left: 30%; */
+}
+
+.inputgetterpassword{
+    grid-column: 2;
+    background-color: #151515;
+    /* width: 45%;
+    height: 40px; */
+    /* justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; */
+    /* border-radius: 41px; */
+    /* width: 45%; */
+    /* grid-row: 3; */
+    margin-left: 30%;
+}
+
+.inputtagpassword{
+    grid-column: 2;
+    /* background-color: #303030; */
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inptagpass{
+    width: 100%;
+    background-color: #303030;
+    border-style: none;
+    /* border:2px white; */
+    /* position: relative; */
+    /* margin-left: 10%;
+    margin-right: 10%;*/
+    margin-bottom: 20%;
+}
+
+.btnforpassword{
+    grid-row: 3;
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40vh;
+}
+
+.btn{
+    background-color: #2C2C2C;
+    border-style: none;
+    width: 15vw;
+    font-size: 40px;
+    border-radius: 15px;
+    padding-top:10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom:10px;
+}
+
+.chatappmain{
+    background-color: #2C2C2C;
+    height: 100px;
+    display: grid;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    justify-content: center;
+    justify-content: center ;
+    grid-column: 2;
+    grid-template-columns: 10% 80% 10%;
+    height: 100%;
+    margin-top: 10vh;
+    border-radius: 20px;
+    /* padding-top: 5vh; */
+    grid-template-rows: 70% 30%;
+    /* margin-top: 4vh; */
+}
+
+.response{
+    background-color: #424242;
+    grid-column: 2;
+    grid-row: 1;
+    margin-bottom: 2vh;
+    margin-top: 5vh;
+}
+
+.request{
+    grid-column: 2;
+    /* background-color: #303030; */
+    width:100%;
+    margin-bottom: 0px;
+    grid-row: 2;
+}
+
+.requestsenderinp{
+    width: 100%;
+    background-color: #131313;
+    border-style: none;
+    
+}

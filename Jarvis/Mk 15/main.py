@@ -316,9 +316,8 @@ for i in range(3):
 
 
 
-        else:
-            continue
-
-        speak("You have got the jarvis password wrong 3 times so exiting the program")
-        quit()
+    else:
+        if i == 2:  # If this was the last attempt
+            speak("Access denied - Maximum password attempts (3) exceeded. Shutting down...")
+            quit()
 

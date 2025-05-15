@@ -1,0 +1,16 @@
+google-generativeai
+keyboard
+pywhatkit
+googletrans
+gtts
+pyautogui
+requests
+plyer
+wolframalpha
+datetime
+os
+webbrowser
+random
+wikipedia
+pyttsx3
+speechrecognition

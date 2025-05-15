@@ -1,0 +1,6 @@
+buy time:93,600
+sell time:94,500
+loss margin: 5%
+profit margin:60%
+BTC
+bitcoin

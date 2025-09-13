@@ -1,5 +1,5 @@
 # from Parts.Ai import main
-import google.generativeai as genai
+import requests
 import keyboard
 import pywhatkit
 # from Parts.Face_Recognition import main
@@ -7,7 +7,6 @@ from fnmatch import translate
 from time import sleep
 from gtts import gTTS
 import pyautogui
-import requests
 import json
 from plyer import notification
 import wolframalpha
@@ -23,6 +22,7 @@ import pyttsx3
 import speech_recognition
 import threading
 from deep_translator import GoogleTranslator
+import google.generativeai as genai
 
 recognizer = speech_recognition.Recognizer()
 engine = pyttsx3.init('sapi5')
@@ -60,32 +60,34 @@ def speak(text):
     engine.runAndWait()
 
 # def ResponceSender(req):
-#     genai.configure(api_key="AIzaSyDd3i4FzfVJ0oHMkYLOHoApHl3Ao8ZXvjA")
-#     model = genai.GenerativeModel('gemini-pro')
-#     response = model.generate_content(req)
-#     res = response.text
-#     if "gemini" in res:
-#         query = query.replace("i am not gemini", "i am jarvis")
-#         query = query.replace("gemini", "jarvis")
-#     return res
+#     try:
+#         genai.configure(api_key="AIzaSyBpyFxVcY4uwNTounFLxwj4_cMVZuHGfSU")
+#         model = genai.GenerativeModel('gemini-2.5-pro-preview-06-05')
+#         response = model.generate_content(req)
+        
+#         # Check if response was blocked
+#         if response.prompt_feedback.block_reason:
+#             return "I apologize, but I cannot process that request."
+            
+#         res = response.text
+#         if "gemini" in res:
+#             res = res.replace("i am not gemini", "i am jarvis")
+#             res = res.replace("gemini", "jarvis")
+#         return res
+#     except Exception as e:
+#         print(f"Error in ResponceSender: {str(e)}")
+#         return "I encountered an error processing your request. Please try again."
 def ResponceSender(req):
     try:
-        genai.configure(api_key="AIzaSyDd3i4FzfVJ0oHMkYLOHoApHl3Ao8ZXvjA")
-        model = genai.GenerativeModel('gemini-2.5-pro-exp-03-25')
+        genai.configure(api_key='AIzaSyBpyFxVcY4uwNTounFLxwj4_cMVZuHGfSU')
+        model = genai.GenerativeModel(model_name="gemini-1.5-flash")
+        # model = genai.GenerativeModel('gemini-1.5-pro')  # fallback to a cheaper or free model
         response = model.generate_content(req)
-        
-        # Check if response was blocked
-        if response.prompt_feedback.block_reason:
-            return "I apologize, but I cannot process that request."
-            
-        res = response.text
-        if "gemini" in res:
-            res = res.replace("i am not gemini", "i am jarvis")
-            res = res.replace("gemini", "jarvis")
-        return res
+        return response.text
     except Exception as e:
         print(f"Error in ResponceSender: {str(e)}")
         return "I encountered an error processing your request. Please try again."
+
 def intro():
     hour = int(datetime.datetime.now().hour)
     if hour >= 0 and hour < 12:

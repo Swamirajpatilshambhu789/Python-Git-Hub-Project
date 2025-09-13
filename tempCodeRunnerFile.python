@@ -1,0 +1,35 @@
+class Solution(object):
+    def clearStars(self, s):
+        alphabets  = [chr(i) for i in range(97, 123)]
+        falsestack = []
+        stack = []
+        real_stack = []
+        for letter in s:
+            falsestack.append(letter)
+        if "*" in falsestack:
+            # Get string char into list for better coding techniques
+            for fstack in falsestack:
+                if fstack=="*":
+                    falsestack = [ch for ch in falsestack if ch != "*"]
+            # Getting falsestack data into stack data but reversed beacuase of the problem
+            for i in range(len(falsestack)):
+                # print(i)
+                stack.append(falsestack.pop())
+                # print(stack)
+            # cleaning stack
+            for alphabet in alphabets:
+                if alphabet in stack:
+                    stack.pop(stack.index(alphabet))
+                    break
+            # Making stack in real index
+            while stack:
+                real_stack.append(stack.pop())
+            # print(real_stack)
+            return ''.join(real_stack)
+        else:
+            return s
+        # return s
+case_str = "abc"
+sol = Solution()
+result = sol.clearStars(case_str)
+print(result)

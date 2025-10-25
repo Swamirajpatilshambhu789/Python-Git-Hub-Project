@@ -41,10 +41,10 @@ def main():
         elif choice == "2":
             view_journal()
         elif choice == "3":
-            print("Exiting the journal.")
+            print("Exiting the journal")
             break
         else:
-            print("Invalid choice. Please try again.")  
+            print("Invalid choice. Please try again")  
 
 if __name__ == "__main__":
     main()  
